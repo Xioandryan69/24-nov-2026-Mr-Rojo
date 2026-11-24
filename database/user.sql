@@ -1,5 +1,5 @@
 CREATE DATABASE testdb;
-CREATE USER 'dev'@'localhost' IDENTIFIED BY '';
-GRANT ALL PRIVILEGES ON testdb.* TO 'dev'@'localhost';
+CREATE USER  IF NOT EXISTS 'dev1'@'%' IDENTIFIED BY 'dev';
+GRANT ALL PRIVILEGES ON *.* TO 'dev1'@'%';
 FLUSH PRIVILEGES;
-ALTER USER 'dev'@'localhost' IDENTIFIED BY 'monNouveauMotDePasse';
+ALTER USER 'dev1'@'localhost' IDENTIFIED BY 'dev';

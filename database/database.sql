@@ -75,3 +75,11 @@ WHERE race_id IS NULL;
 ALTER TABLE animal ADD FOREIGN KEY (race_id) REFERENCES race (id);
 
 --aveo manao uptade race amle animal
+
+SELECT proprietaires.nom ,proprietaires.telephone,proprietaires.id , animal.id,animal.nom,animal.espece
+FROM proprietaires  
+JOIN animal;
+
+SELECT race.id ,race.nom,race.poids_moyen,animal.id,animal.nom,animal.espece
+
+FROM race JOIN animal ON animal.race_id = race.id;
